@@ -1,0 +1,20 @@
+pipeline{
+  
+  agent any
+  
+  stages{
+
+      stage('install'){
+          steps{
+              bat 'npm install'
+              bat 'npm install newman'
+              bat 'npm install newman-reporter-htmlextra'
+          }
+      }
+
+      stage('genrate report'){
+          bat 'new man run newmanApiTest.json'
+      }
+  }
+
+}
