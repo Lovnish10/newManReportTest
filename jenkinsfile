@@ -4,6 +4,14 @@ pipeline{
   
   stages{
 
+      stage('version checking'){
+       steps{
+
+           bat 'node --v'
+           bat 'npm --v'
+       }
+      }
+
       stage('install'){
           steps{
               bat 'npm install'
@@ -13,7 +21,9 @@ pipeline{
       }
 
       stage('genrate report'){
-          bat 'new man run newmanApiTest.json'
+          steps{
+          bat 'newman run newmanApiTest.json --disable-unicode -e test_env.json --r htmlextra'
+          }
       }
   }
 

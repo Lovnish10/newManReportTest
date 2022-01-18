@@ -1,0 +1,24 @@
+{
+	"id": "0d7f9b1a-caa6-4866-b4a3-761e60a4366d",
+	"name": "test-env",
+	"values": [
+		{
+			"key": "host",
+			"value": "https://dog.ceo/api/breeds/image/random",
+			"enabled": true
+		},
+		{
+			"key": "auth-key",
+			"value": "123dog",
+			"enabled": true
+		},
+		{
+			"key": "secret",
+			"value": "mysecret",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2022-01-18T10:56:30.071Z",
+	"_postman_exported_using": "Postman/8.11.1"
+}
