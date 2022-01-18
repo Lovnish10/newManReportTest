@@ -22,7 +22,13 @@ pipeline{
 
       stage('genrate report'){
           steps{
-          bat 'newman run newmanApiTest.json --disable-unicode -e test_env.json -r htmlextra'
+          bat 'newman run newmanApiTest.json --disable-unicode -e ./test_env.json -r htmlextra'
+          }
+      }
+
+      stage('Upload to Aws S3'){
+          steps{
+              bat "printing uploading html to s3"
           }
       }
   }
