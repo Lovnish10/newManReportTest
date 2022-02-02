@@ -1,0 +1,12 @@
+{
+    "Rule":"this is rule",
+      "Target":[
+        {
+            "id" : "121",
+            "role" : "Engineer",
+            "batchParams" : {
+            "batchDefination" : "this is batch defination"
+            }
+        }
+    ]
+    }
