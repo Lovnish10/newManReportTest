@@ -3,6 +3,19 @@ pipeline{
   agent any
   
   stages{
+    
+    
+    stage('read json'){
+      steps{
+        script{
+            def res = readJSON file: 'aws.json'
+          println(res)
+          println(res["Target"][0].batchParams.batchDefination)
+        }
+      
+      }
+    
+    }
 
       stage('version checking'){
        steps{
