@@ -11,11 +11,18 @@ pipeline{
             def res = readJSON file: 'aws.json'
           println(res)
           println(res["Target"][0].batchParams.batchDefination)
+          
+          res["Target"][0].batchParams.batchDefination = "Mai ye update kiya aur sucess hua yes : boy"
+          
+          writeJSON file: 'aws.json', json: res 
+          
         }
       
       }
     
     }
+    
+    
 
       stage('version checking'){
        steps{
