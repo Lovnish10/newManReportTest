@@ -23,7 +23,8 @@ pipeline{
 
       stage('genrate report'){
           steps{
-          bat 'newman run newmanApiTest.json --disable-unicode -e test_env.json --reporter-htmlextra'
+              bat 'newman run newmanApiTest.json --disable-unicode -e test_env.json --reporter-htmlextra'
+         // bat 'newman run newmanApiTest.json --disable-unicode -e test_env.json --reporter-htmlextra'
           }
       }
 
