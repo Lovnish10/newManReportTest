@@ -7,7 +7,7 @@ pipeline{
     
       stage('version checking'){
        steps{
-
+           deleteDir()
            bat 'node --version'
            bat 'npm --version'
        }
